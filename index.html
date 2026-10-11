@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cristian Store</title>
+  <script>try{document.documentElement.setAttribute("data-bs-theme",localStorage.getItem("tema")||"light")}catch(e){}</script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="progreso"></div>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand marca" href="index.html">Cristian Store</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link " href="tienda.html">Tienda</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Categorías</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="tienda.html">Ver todo</a></li>
+                <li><a class="dropdown-item" href="tienda.html?cat=Polos">Polos</a></li>
+                <li><a class="dropdown-item" href="tienda.html?cat=Poleras">Poleras</a></li>
+                <li><a class="dropdown-item" href="tienda.html?cat=Pantalones">Pantalones</a></li>
+                <li><a class="dropdown-item" href="tienda.html?cat=Accesorios">Accesorios</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="index.html#entrega">Entregas</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+            <li class="nav-item ms-lg-2"><a class="btn-fav" href="tienda.html?cat=Favoritos" aria-label="Ver mis favoritos"><i class="bi bi-heart-fill"></i> <span id="favContador">0</span></a></li>
+            <li class="nav-item ms-lg-2"><button class="btn-tema" id="btnTema" type="button" aria-label="Cambiar tema"></button></li>
+            <li class="nav-item ms-lg-2"><a class="btn btn-lima btn-sm" href="carrito.html"><i class="bi bi-bag"></i> Carrito <span class="contador" id="contador">0</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="burbuja b1"></div><div class="burbuja b2"></div>
+      <div class="container hero-grid">
+        <div class="hero-texto">
+          <h1>Ropa cómoda, hecha para tu día a día.</h1>
+          <p>Polos, poleras, jeans y accesorios de algodón peruano. Compra en línea y recibe en todo el Perú, o paga cuando te llegue.</p>
+          <a href="tienda.html" class="btn btn-lima btn-lg pulso">Ir a la tienda</a>
+          <a href="#entrega" class="btn btn-borde btn-lg">Cómo recibo mi pedido</a>
+        </div>
+        <div class="hero-prendas" aria-hidden="true">
+          <span class="flota f1"><img src="img/polo.jpg" alt=""></span><span class="flota f2"><img src="img/poleraconcapucha.jpg" alt=""></span><span class="flota f3"><img src="img/playa.jpg" alt=""></span><span class="flota f4"><img src="img/recto.jpg" alt=""></span>
+        </div>
+      </div>
+    </section>
+
+    <div class="cinta" aria-hidden="true">
+      <div class="cinta-pista">
+        <span>Envío a todo el Perú ✦ Contraentrega en Lima ✦ Algodón pima ✦ Cambios gratis ✦ Envío a todo el Perú ✦ Contraentrega en Lima ✦ Algodón pima ✦ Cambios gratis ✦ </span>
+        <span>Envío a todo el Perú ✦ Contraentrega en Lima ✦ Algodón pima ✦ Cambios gratis ✦ Envío a todo el Perú ✦ Contraentrega en Lima ✦ Algodón pima ✦ Cambios gratis ✦ </span>
+      </div>
+    </div>
+
+    <section class="container seccion">
+      <div class="numeros">
+        <div class="aparecer"><strong data-meta="5000">0</strong><span>pedidos entregados</span></div>
+        <div class="aparecer"><strong data-meta="24">0</strong><span>departamentos con envío</span></div>
+        <div class="aparecer"><strong data-meta="12">0</strong><span>prendas en catálogo</span></div>
+        <div class="aparecer"><strong data-meta="98">0</strong><span>% de clientes felices</span></div>
+      </div>
+    </section>
+
+    <section class="container seccion">
+      <h2 class="aparecer">Compra por categoría</h2>
+      <div class="cats">
+        <a href="tienda.html?cat=Polos" class="aparecer"><span><img src="img/polo.jpg" alt=""></span>Polos</a>
+        <a href="tienda.html?cat=Poleras" class="aparecer"><span><img src="img/poleraconcapucha.jpg" alt=""></span>Poleras</a>
+        <a href="tienda.html?cat=Pantalones" class="aparecer"><span><img src="img/recto.jpg" alt=""></span>Pantalones</a>
+        <a href="tienda.html?cat=Accesorios" class="aparecer"><span><img src="img/trama.jpg" alt=""></span>Accesorios</a>
+      </div>
+    </section>
+
+    <section class="container seccion">
+      <div class="titulo-fila aparecer"><h2>Lo más pedido</h2><a href="tienda.html" class="btn btn-borde btn-sm">Ver todo</a></div>
+      <div class="row g-3 g-lg-4" id="destacados"></div>
+    </section>
+
+    <section class="container seccion" id="entrega">
+      <h2 class="aparecer">Elige cómo recibir tu pedido</h2>
+      <div class="entregas">
+        <article class="aparecer"><i class="bi bi-truck"></i><h3>Envío a todo el Perú</h3><p>Pagas en línea y te lo llevamos a tu casa en 2 a 5 días hábiles. Gratis desde S/ 200.</p><strong>S/ 15 por pedido</strong></article>
+        <article class="aparecer"><i class="bi bi-cash-coin"></i><h3>Contraentrega en Lima y Callao</h3><p>Recibes tu pedido y pagas en efectivo o Yape al repartidor. Entrega en 24 a 48 horas.</p><strong>S/ 10 por pedido</strong></article>
+      </div>
+    </section>
+
+    <section class="container seccion" id="contacto">
+      <div class="contacto">
+        <div class="contacto-texto aparecer">
+          <h2>Escríbenos</h2>
+          <p>¿Dudas con tu talla, tu pedido o quieres comprar al por mayor? Déjanos tus datos y te respondemos en menos de 24 horas.</p>
+          <p><i class="bi bi-whatsapp"></i> 974 288 700</p>
+          <p><i class="bi bi-envelope"></i> chipanasantoscristiananderson@gmail.com</p>
+        </div>
+        <form id="formContacto" method="post" action="#" novalidate class="caja aparecer">
+          <div class="mb-3"><label for="nombre" class="form-label">Nombres y apellidos</label><input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej. Ana Torres"></div>
+          <div class="mb-3"><label for="correo" class="form-label">Correo</label><input type="email" class="form-control" id="correo" name="correo" placeholder="correo@ejemplo.com"></div>
+          <div class="mb-3"><label for="celular" class="form-label">Celular</label><input type="text" class="form-control" id="celular" name="celular" placeholder="9 dígitos"></div>
+          <div class="mb-3"><label for="asunto" class="form-label">¿Sobre qué quieres hablar?</label>
+            <select class="form-select" id="asunto" name="asunto"><option value="">Elige un tema</option><option>Estado de mi pedido</option><option>Tallas y medidas</option><option>Cambios y devoluciones</option><option>Compras al por mayor</option></select></div>
+          <div class="mb-3"><p class="form-label mb-1">¿Ya compraste antes?</p>
+            <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="cliente" id="nuevo" value="Primera vez"><label class="form-check-label" for="nuevo">Es mi primera vez</label></div>
+            <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="cliente" id="antiguo" value="Ya compré"><label class="form-check-label" for="antiguo">Ya compré</label></div></div>
+          <div class="mb-3"><label for="mensaje" class="form-label">Mensaje</label><textarea class="form-control" id="mensaje" name="mensaje" rows="3" placeholder="Cuéntanos en qué te ayudamos"></textarea></div>
+          <div class="mb-3 form-check"><input type="checkbox" class="form-check-input" id="terminos" name="terminos"><label class="form-check-label" for="terminos">Acepto los términos y condiciones</label></div>
+          <button type="submit" class="btn btn-lima">Enviar mensaje</button>
+          <button type="reset" class="btn btn-borde">Limpiar</button>
+          <div id="respuesta" class="mt-3"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Opiniones de ejemplo: cámbialas por opiniones reales de tus clientes -->
+    <section class="container seccion">
+      <h2 class="aparecer">Lo que dicen nuestros clientes</h2>
+      <div class="opiniones">
+        <article class="opinion aparecer"><div class="estrellas" aria-label="5 estrellas">★★★★★</div><p>Las prendas son súper cómodas y la tela se siente de calidad. Me llegó en 3 días.</p><footer><span class="inicial">A</span><span>Ana T.<small>Lima</small></span></footer></article>
+        <article class="opinion aparecer"><div class="estrellas" aria-label="5 estrellas">★★★★★</div><p>Pedí con contraentrega y pagué por Yape al recibir. Todo tal cual la foto.</p><footer><span class="inicial">L</span><span>Luis M.<small>Callao</small></span></footer></article>
+        <article class="opinion aparecer"><div class="estrellas" aria-label="5 estrellas">★★★★★</div><p>Me quedó una talla grande y me lo cambiaron sin costo. Muy buena atención.</p><footer><span class="inicial">C</span><span>Camila R.<small>Piura</small></span></footer></article>
+      </div>
+    </section>
+
+    <section class="container seccion" id="preguntas">
+      <h2 class="aparecer">Preguntas frecuentes</h2>
+      <div class="accordion aparecer" id="faq">
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">¿Cuánto demora mi pedido?</button></h3>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Con envío a todo el Perú llega en 2 a 5 días hábiles. Con contraentrega en Lima y Callao, en 24 a 48 horas.</div></div></div>
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">¿Cómo pago?</button></h3>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Con envío pagas en línea (te mandamos los datos por correo). Con contraentrega pagas en efectivo o Yape al repartidor.</div></div></div>
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">¿Puedo cambiar mi prenda?</button></h3>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Sí, los cambios son gratis. Escríbenos por WhatsApp al 974 288 700 con tu código de pedido.</div></div></div>
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">¿Cómo uso un cupón?</button></h3>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">En tu carrito escribe el código en el recuadro de cupón y toca Aplicar. Prueba con <strong>CRISTIANSPIDER2026</strong> para 10% de descuento.</div></div></div>
+      </div>
+    </section>
+
+    <section class="container seccion">
+      <div class="banner aparecer"><div><h2>¿Ya elegiste?</h2><p>Revisa tu carrito y termina tu compra en un minuto.</p></div><a href="carrito.html" class="btn btn-lima btn-lg">Ver mi carrito</a></div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="marca">Cristian Store</p>
+    <div class="redes">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.tiktok.com/es/" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      <a href="https://wa.me/51974288700" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    </div>
+    <nav class="pie-links" aria-label="Enlaces del pie"><a href="index.html"><i class="bi bi-house"></i> Inicio</a><a href="tienda.html"><i class="bi bi-shop"></i> Tienda</a><a href="carrito.html"><i class="bi bi-bag"></i> Carrito</a></nav>
+    <p class="small">&copy; 2026 Cristian Store. Todos los derechos reservados.</p>
+  </footer>
+  <button class="subir" id="subir" type="button" aria-label="Volver arriba">&uarr;</button>
+  <div id="fotos" hidden>
+    <img data-id="1" src="img/polo.jpg" alt="Polo Básico Pima">
+    <img data-id="2" src="img/polo-oversize.png" alt="Polo Oversize">
+    <img data-id="3" src="img/poleraconcapucha.jpg" alt="Polera con Capucha">
+    <img data-id="4" src="img/denim.jpg" alt="Casaca Denim">
+    <img data-id="5" src="img/recto.jpg" alt="Jean Recto">
+    <img data-id="6" src="img/jogger.png" alt="Jogger de Algodón">
+    <img data-id="7" src="img/trama.jpg" alt="Gorra Trama">
+    <img data-id="8" src="img/tote.jpg" alt="Bolso Tote">
+    <img data-id="9" src="img/rayas.jpg" alt="Polo Rayas">
+    <img data-id="10" src="img/playa.jpg" alt="Short de Playa">
+    <img data-id="11" src="img/poleracuelloalto.jpg" alt="Polera Cuello Alto">
+    <img data-id="12" src="img/medias.jpg" alt="Medias Pack x3">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="comun.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
